@@ -100,15 +100,15 @@ Once the AutoML experiment has concluded, the most accurate model is chosen from
 ### Results
 The model with the highest accuracy from AutoML was the `VotingEnsemble` with a score of 0.845, as seen in the image below. The parameters of its inner estimators and their individual weights used to combine them are visible, along with the identifiers for each estimator used. For additional information, please refer to [this](automl.ipynb) notebook.
 
-<img src="screenshots/auto-ml-best-model.png" width=75%>
-<img src="screenshots/auto-ml-best-model_1.png" width=75%>
-<img src="screenshots/auto-ml-best-model_2.png" width=75%>
-<img src="screenshots/auto-ml-best-model_3.png" width=75%>
+<img src="screenshots/auto-ml-best-model.png">
+<img src="screenshots/auto-ml-best-model_1.png">
+<img src="screenshots/auto-ml-best-model_2.png">
+<img src="screenshots/auto-ml-best-model_3.png">
 
 **RunDetails widget**
-<img src="screenshots/RunDetails.png" width=75%>
-<img src="screenshots/RunDetails_2.png" width=75%>
-<img src="screenshots/RunDetails_3.png" width=75%>
+<img src="screenshots/RunDetails.png">
+<img src="screenshots/RunDetails_2.png">
+<img src="screenshots/RunDetails_3.png">
 
 ## Hyperparameter Tuning
 This pipeline uses a custom-coded Scikit-learn logistic regression model stored in a train.py script, along with a Hyperdrive run that performs random sampling over the model parameters. The data undergoes preprocessing and is split into train and test sets. The logistic regression parameters are set to a `uniform` distribution with a minimum of 0.0001 and a maximum of 1 for the inverse of regularization strength, and a range of values (5, 25, 50, 100, 200, 500, 1000) for the `maximum number of iterations` convergence. The `BanditPolicy` class is also utilized to provide an early termination policy based on slack criteria, and a frequency and delay interval for evaluation.
@@ -177,17 +177,17 @@ Best Experiment Run:
 
 For additional information, please refer to [this](hyperparameter_tuning.ipynb) notebook.
 
-<img src="screenshots/hd-best-model.png" width=75%>
-<img src="screenshots/hd-best-model_1.png" width=75%>
+<img src="screenshots/hd-best-model.png">
+<img src="screenshots/hd-best-model_1.png">
 
 **RunDetails widget**
-<img src="screenshots/RunDetails-hd.png" width=75%>
-<img src="screenshots/RunDetails-hd_1.png" width=75%>
-<img src="screenshots/RunDetails-hd_2.png" width=75%>
-<img src="screenshots/RunDetails-hd_3.png" width=75%>
-<img src="screenshots/RunDetails-hd_4.png" width=75%>
-<img src="screenshots/RunDetails-hd_5.png" width=75%>
-<img src="screenshots/RunDetails-hd_6.png" width=75%>
+<img src="screenshots/RunDetails-hd.png">
+<img src="screenshots/RunDetails-hd_1.png">
+<img src="screenshots/RunDetails-hd_2.png">
+<img src="screenshots/RunDetails-hd_3.png">
+<img src="screenshots/RunDetails-hd_4.png">
+<img src="screenshots/RunDetails-hd_5.png">
+<img src="screenshots/RunDetails-hd_6.png">
 
 ## Model Deployment
 We are utilizing the most accurate ML model from AutoML experiment and deploying it using Azure Container Instance (ACI). This model can be reached through a REST API. We have additionally included a file with the environment information, `myenv.yml`, in order to guarantee reproducibility. To query the endpoint, we are taking five samples from the dataset so we can decide if the model did well on the input data and returned the correct prediction. Here is a snippet of code with an example of the input we used to make a request to the model:
@@ -281,7 +281,7 @@ Output `0: Deceased` and `1: Survived`:
 ```
 
 **Active Endpoint**
-<img src="screenshots/active_endpoint.png" width=75%>
+<img src="screenshots/active_endpoint.png">
 
 ## Screen Recording
 This [screencast](https://youtu.be/_cbXL_Qkfrs) shows the entire process of the working ML application and it demonstrates:
