@@ -2,9 +2,6 @@
 
 This project is composed of two sections: the first will incorporate Automated ML (AutoML) and the second will be a personalized model whose hyperparameters are adjusted through HyperDrive. The model trained by AutoML will be put into action and can be accessed as a Machine Learning service with which we can communicate through a REST API. We will use a kaggle data set to educate the model to categorize the `passenger survival probability` based on passenger data (ie name, age, gender, socio-economic class, etc). and we will make use of all the different tools presented in AzureML Studio for this purpose. Please look at the following section for more details regarding the data set utilized in this project.
 
-## Project Set Up and Installation
-*OPTIONAL:* If your project has any special installation steps, this is where you should put it. To turn this project into a professional portfolio project, you are encouraged to explain how to set up this project in AzureML.
-
 ## Dataset
 
 ### Overview
